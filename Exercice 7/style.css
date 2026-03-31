@@ -1,0 +1,81 @@
+:root {
+    --primary: #0984e3;
+    --primary-dark: #0747a6;
+    --bg: #f8f9fa;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    height: 100vh;
+    margin: 0;
+    background-color: var(--bg);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.btn-premium {
+    position: relative;
+    padding: 18px 45px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+    background-color: var(--primary);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 0 #06528e, 0 15px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-premium:hover {
+    transform: translateY(-2px);
+    background-color: #0a8df0;
+    box-shadow: 0 12px 0 #06528e, 0 20px 25px rgba(0, 0, 0, 0.2);
+}
+.btn-premium:active {
+    transform: translateY(8px);
+    box-shadow: 0 2px 0 #06528e, 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+.loader-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.spinner-modern {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, transparent 30%, var(--primary));
+    -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 7px), #000 0);
+    mask: radial-gradient(farthest-side, transparent calc(100% - 7px), #000 0);
+    animation: spin-smooth 0.8s infinite linear;
+}
+
+@keyframes spin-smooth {
+    to { 
+        transform: rotate(360deg);
+    }
+}
+
+.loading-text {
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #636e72;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    animation: pulse-text 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse-text {
+    0%, 100% { 
+        opacity: 0.4; 
+    }
+    50% { 
+        opacity: 1; 
+    }
+}

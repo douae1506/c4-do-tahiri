@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercice 2 </title>
+
+  <style>
+    body {
+      font-family: Arial;
+      background: #f4f4f4;
+      padding: 20px;
+    }
+
+    .container {
+      background: white;
+      padding: 15px;
+    }
+
+    .enonce {
+      background: #eee;
+      padding: 10px;
+      font-family: monospace;
+      white-space: pre-wrap;
+      margin-bottom: 15px;
+    }
+
+    .question {
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    .reponse {
+      margin-left: 15px;
+      color: green;
+    }
+
+    code {
+      color: red;
+    }
+  </style>
+
+</head>
+<body>
+
+<div class="container">
+
+  <h1>Exercice 2 : Box Model</h1>
+
+  <h2>2.1 Comprendre le Box Model</h2>
+
+  <div class="enonce">
+.box {
+  width: 300px;
+  padding: 20px;
+  border: 5px solid #333;
+  margin: 15px;
+}
+  </div>
+
+  <p class="question">1. Avec box-sizing: content-box, quelle est la largeur totale visible ?</p>
+  <p class="reponse">Réponse : 300 + 40 + 10 = <code>350px</code></p>
+
+  <p class="question">2. Avec box-sizing: border-box, quelle est la largeur totale visible ?</p>
+  <p class="reponse">Réponse : <code>300px</code></p>
+
+  <p class="question">3. Écrivez le reset CSS universel pour box-sizing :</p>
+  <p class="reponse">
+    <code>
+* {
+  box-sizing: border-box;
+}
+    </code>
+  </p>
+
+  <h2>2.2 Centrer un élément</h2>
+
+  <p class="reponse">
+    <pre><code>
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+div {
+  width: 600px;
+  margin: auto;
+}
+    </code></pre>
+  </p>
+
+  
+
+</div>
+
+</body>
+</html>

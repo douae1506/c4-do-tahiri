@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercice 1</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      background: #f4f4f4;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    .container {
+      background: white;
+      padding: 15px;
+    }
+
+    .enonce {
+      background: #eee;
+      padding: 10px;
+      font-family: monospace;
+      white-space: pre-wrap;
+    }
+
+    .question {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .reponse {
+      margin-left: 15px;
+      color: #444;
+    }
+
+    code {
+      color: red;
+    }
+  </style>
+
+</head>
+<body>
+
+<div class="container">
+<h1>Exercice 1</h1>
+  <h2>Code</h2>
+  <div class="enonce">
+&lt;nav class="main-nav"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="/" class="active"&gt;Accueil&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/about"&gt;À propos&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;main&gt;
+  &lt;article class="post featured"&gt;
+    &lt;h2&gt;Premier article&lt;/h2&gt;
+    &lt;p&gt;Contenu...&lt;/p&gt;
+  &lt;/article&gt;
+
+  &lt;article class="post"&gt;
+    &lt;h2&gt;Deuxième article&lt;/h2&gt;
+    &lt;p&gt;Contenu...&lt;/p&gt;
+  &lt;/article&gt;
+&lt;/main&gt;
+  </div>
+
+  <h2>1.1 Sélecteurs</h2>
+
+  <p class="question">1. Sélectionner tous les liens dans la navigation :</p>
+  <p class="reponse"><code>.main-nav a</code></p>
+
+  <p class="question">2. Sélectionner uniquement le lien actif :</p>
+  <p class="reponse"><code>.main-nav a.active</code></p>
+
+  <p class="question">3. Sélectionner l'article qui a la classe featured :</p>
+  <p class="reponse"><code>article.featured</code></p>
+
+  <p class="question">4. Sélectionner le premier paragraphe de chaque article :</p>
+  <p class="reponse"><code>article p:first-of-type</code></p>
+
+  <p class="question">5. Sélectionner les éléments li pairs :</p>
+  <p class="reponse"><code>li:nth-child(even)</code></p>
+
+  <h2>1.2 Spécificité</h2>
+
+  <p class="question">1. Classement par spécificité croissante :</p>
+  <p class="reponse"><code>p &lt; .text &lt; p.text &lt; #main &lt; #main .text p</code></p>
+
+  <p class="question">2. Si deux règles ont la même spécificité :</p>
+  <p class="reponse">La dernière règle écrite dans le code gagne.</p>
+
+  <p class="question">3. Pourquoi éviter !important :</p>
+  <p class="reponse">Parce qu’il rend le code difficile à maintenir et casse la priorité normale.</p>
+
+</div>
+
+</body>
+</html>
